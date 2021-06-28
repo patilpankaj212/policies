@@ -19,7 +19,7 @@ func TestAWSPolicies(t *testing.T) {
 
 	policyDirs, err := utils.FindAllSubDirectories(awsPolicyDir, filterFolders)
 	if err != nil {
-		t.Errorf("failed to policy directories in aws policy dir")
+		t.Errorf("failed to load policy directories in aws policy dir. error: %v", err)
 	}
 
 	commonTest(t, policyDirs, "terraform")
@@ -33,7 +33,7 @@ func TestAzurePolicies(t *testing.T) {
 
 	policyDirs, err := utils.FindAllSubDirectories(azurePolicyDir, filterFolders)
 	if err != nil {
-		t.Errorf("failed to policy directories in azure policy dir")
+		t.Errorf("failed to laod policy directories in azure policy dir. error: %v", err)
 	}
 
 	commonTest(t, policyDirs, "terraform")
@@ -47,7 +47,7 @@ func TestGCPPolicies(t *testing.T) {
 
 	policyDirs, err := utils.FindAllSubDirectories(gcpPolicyDir, filterFolders)
 	if err != nil {
-		t.Errorf("failed to policy directories in gcp policy dir")
+		t.Errorf("failed to load policy directories in gcp policy dir. error: %v", err)
 	}
 
 	commonTest(t, policyDirs, "terraform")
@@ -61,7 +61,7 @@ func TestK8sPolicies(t *testing.T) {
 
 	policyDirs, err := utils.FindAllSubDirectories(k8sPolicyDir, filterFolders)
 	if err != nil {
-		t.Errorf("failed to policy directories in k8s policy dir")
+		t.Errorf("failed to load policy directories in k8s policy dir. error: %v", err)
 	}
 
 	commonTest(t, policyDirs, "k8s")

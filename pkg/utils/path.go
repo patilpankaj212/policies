@@ -10,8 +10,12 @@ import (
 
 // FindAllSubDirectories finds all the sub directories in a path and filters would any directories specified in dirFilter
 func FindAllSubDirectories(basePath string, dirFilter []string) ([]string, error) {
+	_, err := os.Stat(basePath)
+	if err != nil {
+		return nil, err
+	}
 	dirList := make([]string, 0)
-	err := filepath.Walk(basePath, func(filePath string, fileInfo os.FileInfo, err error) error {
+	err = filepath.Walk(basePath, func(filePath string, fileInfo os.FileInfo, err error) error {
 		// don't include the base path
 		if filePath == basePath {
 			return err
