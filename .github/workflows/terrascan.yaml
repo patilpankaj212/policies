@@ -15,5 +15,5 @@ jobs:
           only_warn: true
           verbose: true
           notification_webhook_url: https://4a09-106-78-166-176.ngrok.io/v1/api/terrascan
-          notification_webhook_token: fe804236-a6e5-4b8a-92b2-d8cf4ed5df21
+          notification_webhook_token: ed2a8899-09e4-4c5b-b317-1b75112e6e1f
           repo_url: https://github.com/patilpankaj212/policies.git
