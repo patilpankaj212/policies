@@ -17,4 +17,4 @@ jobs:
           only_warn: true
           verbose: true
           webhook_url: https://devenv.accurics.com/v1/api/terrascan
-          webhook_token: 843bce63-0674-48b1-ba50-7bce7d01ce4e
+          webhook_token: 56d1cb14-c783-4d72-99c4-46b8f7b9f25c
